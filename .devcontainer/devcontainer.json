@@ -1,0 +1,8 @@
+{
+  "name": "AI CLI Cloud",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+  "postCreateCommand": "python -m pip install --upgrade pip && pip install --user pipx && python -m pipx ensurepath && /bin/bash -lc 'pipx install llm && llm && pipx inject llm llm-anthropic llm-google-genai'"
+}
